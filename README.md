@@ -1,30 +1,47 @@
 # **Finding Lane Lines on the Road** 
-[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
-<img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
+## Writeup Template
 
-Overview
+### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
+
 ---
 
-Project 1 of Self-Driving Car NanoDegree. 
+**Finding Lane Lines on the Road**
 
-Based on the [problem statement & code template](https://github.com/udacity/CarND-LaneLines-P1/blob/master/P1.ipynb) and the [writeup template](https://github.com/udacity/CarND-LaneLines-P1/blob/master/writeup_template.md). The project requirements are listed in the [project rubric](https://review.udacity.com/#!/rubrics/322/view)
+The goals / steps of this project are the following:
+* Make a pipeline that finds lane lines on the road
+* Reflect on your work in a written report
 
 
-Project Reflection
+[//]: # (Image References)
+
+[image1]: ./examples/grayscale.jpg "Grayscale"
+
 ---
 
-1. Describe the pipeline
-From a 30,000 foot view, the pipeline is based on tuning of a few images (far less than the # of images contained in the video sequence used for testing).
-The image is converted to grey scale, and undertakes a Gaussian smooth to reduce noise. Then Canny edge filter is applied, and a masked area (so that edges of other objects on the road are omitted) is used to detect lanes. The Hough transform is applied and tuned to find line segments that are more likely to be the lane markings. The segments are then fitted linearly, to extend the segments into lines that define the lane continuously.
+### Reflection
 
-2. Identify any shortcomings
-    1. Manually tuned parameters based on a small sample population.
-    2. The masked area enables simplicity of detection, but is highly dependent on the mounting location of camera.
+### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
-3. Suggest possible improvements
+My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
+
+In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
+
+If you'd like to include images to show how the pipeline works, here is how to include an image: 
+
+![alt text][image1]
 
 
-Project Criteria Checklist
----
+### 2. Identify potential shortcomings with your current pipeline
 
+
+One potential shortcoming would be what would happen when ... 
+
+Another shortcoming could be ...
+
+
+### 3. Suggest possible improvements to your pipeline
+
+A possible improvement would be to ...
+
+Another potential improvement could be to ...
