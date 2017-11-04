@@ -25,12 +25,18 @@ The goals / steps of this project are the following:
 ### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 
 My pipeline consisted of 6 steps. 
-    1. I converted the images to grayscale: ![alt text][image1]
-    2. I applied a Gaussian filter to smooth out noises:![alt text][image2]
-    3. I applied Canny filter to detect the edges: ![alt text][image3]
-    4. A mask is used to reduce the view to only the region of interest, that roughly outlines area of left and right lanes: ![alt text][image4]
-    5. The line segments of lane markings are then detected in the Hough space: ![alt text][image5]
-    6. The line segments tracing the left and right lane markings are then fitted linearly, that extends to make the boundaries more continuous: ![alt text][image6]
+    1. I converted the images to grayscale: 
+    ![alt text][image1]
+    2. I applied a Gaussian filter to smooth out noises:
+    ![alt text][image2]
+    3. I applied Canny filter to detect the edges: 
+    ![alt text][image3]
+    4. A mask is used to reduce the view to only the region of interest, that roughly outlines area of left and right lanes: 
+    ![alt text][image4]
+    5. The line segments of lane markings are then detected in the Hough space: 
+    ![alt text][image5]
+    6. The line segments tracing the left and right lane markings are then fitted linearly, that extends to make the boundaries more continuous: 
+    ![alt text][image6]
 
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by adding a linear fit, which is shown above (lines in red).
