@@ -2,9 +2,7 @@
 
 ---
 
-**Finding Lane Lines on the Road**
-
-The goals / steps of this project are the following:
+**Goals**
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
@@ -20,9 +18,7 @@ The goals / steps of this project are the following:
 
 ---
 
-### Reflection
-
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 1. Structure of the pipeline
 
 My pipeline consisted of 6 steps. 
 1. I converted the images to grayscale: 
@@ -53,14 +49,14 @@ My pipeline consisted of 6 steps.
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by adding a linear fit, which is shown above (lines in red).
 
 
-### 2. Identify potential shortcomings with your current pipeline
+### 2. Potential shortcomings
 
 1. Manually tuned parameters that are specific to the camera mounting location (the challenge problem had the edge of the hood in the view of the camera, which is picked up by line detection).
 2. "Optimized" based on a small sample set of images, while the test is done by a video sequence which contained many more images.
 3. The linear fit takes all starting points of line segments into account. And objects picked by lines detected that are not part of lane markings cause the fitted lines jitter.
 
 
-### 3. Suggest possible improvements to your pipeline
+### 3. Todos
 
 1. Use logic to filter line segments detected from Hough space -- the slope of lane markings should be within a tolerance band with a given mounting location of the camera, so that anything that's beyond the band should be eliminated.
 2. If ground truth data can be provided to a larger training set, a deep learning approach may be better.
